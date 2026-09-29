@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Globe, AlertTriangle, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Globe, AlertTriangle, ShieldCheck, Car } from 'lucide-react';
 import contactDoctorImg from '../assets/contact_doctor.jpg';
 import whatsappImg from '../assets/whatsapp.png';
 import { PDF_BOOKLET_DATA } from '../data/hospitalData';
@@ -556,9 +556,9 @@ export default function ContactUs({ onOpenEmergency }) {
                 padding: '1rem',
                 borderRadius: '12px'
               }}>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-main)', margin: 0, lineHeight: 1.4 }}>
-                  🚗 <strong>Free Patient Parking Available</strong>: Safe & spacious car/two-wheeler parking available inside the hospital premises.
-                </p>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-main)', margin: 0, lineHeight: 1.4, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Car size={16} color="var(--accent)" style={{ flexShrink: 0 }} /> <strong>Free Patient Parking Available</strong>: Safe & spacious car/two-wheeler parking available inside the hospital premises.
+                </div>
               </div>
             </div>
 

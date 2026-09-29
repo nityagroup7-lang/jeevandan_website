@@ -26,7 +26,6 @@ export default function Navbar({ onOpenAppointment, onOpenEmergency, theme, togg
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About Us' },
     { path: '/services', label: 'Services' },
-    { path: '/blog', label: 'Health Blog' },
     { path: '/gallery', label: 'Gallery' },
     { path: '/contact', label: 'Contact Us' },
     { path: '/career', label: 'Career' },

@@ -44,7 +44,7 @@ export default function PatientPortal({ onOpenAppointment }) {
   };
 
   return (
-    <section style={{ padding: '4.5rem 0', background: 'var(--bg-main)' }}>
+    <section style={{ padding: '2rem 0 2rem 0', background: 'var(--bg-main)' }}>
       <div className="container">
         
         {/* Section Header */}
@@ -198,7 +198,7 @@ export default function PatientPortal({ onOpenAppointment }) {
         </div>
 
         {/* Ready Reports List Section */}
-        <div style={{ marginBottom: '2rem' }}>
+        <div style={{ marginBottom: '0' }}>
           <h3 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '1.25rem' }}>
             Recent Available Diagnostic Reports ({reportsList.length})
           </h3>

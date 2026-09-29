@@ -4,7 +4,7 @@ import { TESTIMONIALS } from '../data/hospitalData';
 
 export default function Testimonials() {
   return (
-    <section style={{ padding: '4.5rem 0', background: 'var(--bg-main)' }}>
+    <section style={{ padding: '2rem 0 4.5rem 0', background: 'var(--bg-main)' }}>
       <div className="container">
         
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>

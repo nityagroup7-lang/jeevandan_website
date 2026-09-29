@@ -23,7 +23,7 @@
 
   --emergency-red: #dc2626;
   --emergency-gradient: linear-gradient(135deg, #b91c1c 0%, #ea580c 100%);
-  
+
   --success: #10b981;
   --warning: #f59e0b;
   --purple: #8b5cf6;
@@ -79,14 +79,19 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#root, .app-root, main, section {
+#root,
+.app-root,
+main,
+section {
   width: 100% !important;
   max-width: 100% !important;
   overflow-x: hidden !important;
   box-sizing: border-box !important;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -95,21 +100,30 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-main);
 }
+
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border-radius: 4px;
 }
+
 [data-theme="dark"] ::-webkit-scrollbar-thumb {
   background: #334155;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   letter-spacing: -0.02em;
   overflow-wrap: break-word;
@@ -120,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 1.5rem;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -163,6 +177,7 @@ h1, h2, h3, h4, h5, h6 {
   word-break: break-word;
   white-space: normal;
 }
+
 [data-theme="dark"] .section-tag {
   background: rgba(0, 180, 216, 0.2);
   color: var(--accent);
@@ -236,6 +251,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--accent);
   color: var(--primary);
 }
+
 [data-theme="dark"] .btn-secondary:hover {
   color: var(--accent);
 }
@@ -245,17 +261,28 @@ h1, h2, h3, h4, h5, h6 {
   0% {
     box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
   }
+
   70% {
     box-shadow: 0 0 0 12px rgba(239, 68, 68, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
   }
 }
 
 @keyframes live-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.2); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
 }
 
 .live-pulse {
@@ -298,13 +325,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px) scale(0.97); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Inputs & Selects */
@@ -321,7 +360,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.4rem;
 }
 
-.form-input, .form-select {
+.form-input,
+.form-select {
   width: 100%;
   padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
@@ -335,7 +375,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
 }
 
-.form-input:focus, .form-select:focus {
+.form-input:focus,
+.form-select:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-glow);
 }
@@ -354,61 +395,112 @@ h1, h2, h3, h4, h5, h6 {
   white-space: normal;
 }
 
-.badge-success { background: rgba(16, 185, 129, 0.15); color: #059669; }
-.badge-warning { background: rgba(245, 158, 11, 0.15); color: #d97706; }
-.badge-danger { background: rgba(239, 68, 68, 0.15); color: #dc2626; }
-.badge-info { background: rgba(0, 180, 216, 0.15); color: #0284c7; }
+.badge-success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #059669;
+}
+
+.badge-warning {
+  background: rgba(245, 158, 11, 0.15);
+  color: #d97706;
+}
+
+.badge-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #dc2626;
+}
+
+.badge-info {
+  background: rgba(0, 180, 216, 0.15);
+  color: #0284c7;
+}
 
 /* Responsive grid layouts */
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
 
-img, svg, canvas {
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+img,
+svg,
+canvas {
   max-width: 100%;
   height: auto;
 }
 
 @media (max-width: 1024px) {
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
-  html, body, #root, .app-root, main, section {
+
+  html,
+  body,
+  #root,
+  .app-root,
+  main,
+  section {
     overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100vw !important;
   }
+
   .container {
     padding: 0 0.75rem !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
-  .grid-4, .grid-3, .grid-2 { 
-    grid-template-columns: 1fr !important; 
+
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr !important;
     gap: 1rem !important;
   }
-  .section-title { 
-    font-size: 1.45rem !important; 
+
+  .section-title {
+    font-size: 1.45rem !important;
     line-height: 1.25 !important;
     word-break: break-word !important;
   }
+
   .section-subtitle {
     font-size: 0.88rem !important;
     word-break: break-word !important;
   }
+
   .section-tag {
     font-size: 0.72rem !important;
     white-space: normal !important;
     word-break: break-word !important;
     max-width: 100% !important;
   }
+
   .glass-card {
     padding: 1rem !important;
     border-radius: var(--radius-md) !important;
     max-width: 100% !important;
   }
+
   .btn {
     width: 100% !important;
     padding: 0.7rem 0.75rem !important;
@@ -417,14 +509,14 @@ img, svg, canvas {
     word-break: break-word !important;
     text-align: center !important;
   }
+
   .modal-overlay {
     padding: 0.5rem !important;
   }
+
   .modal-content {
     max-height: 94vh !important;
     border-radius: var(--radius-lg) !important;
     padding: 0.85rem !important;
   }
 }
-
-

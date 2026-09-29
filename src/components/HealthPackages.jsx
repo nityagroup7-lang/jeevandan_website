@@ -4,7 +4,7 @@ import { HEALTH_PACKAGES } from '../data/hospitalData';
 
 export default function HealthPackages({ onOpenAppointment }) {
   return (
-    <section style={{ padding: '4.5rem 0', background: 'var(--bg-main)' }}>
+    <section style={{ padding: '2rem 0 2rem 0', background: 'var(--bg-main)' }}>
       <div className="container">
         
         {/* Section Header */}

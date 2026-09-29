@@ -37,7 +37,7 @@ export default function BedTracker({ onOpenEmergency }) {
   };
 
   return (
-    <section style={{ padding: '4rem 0', background: 'var(--bg-main)' }}>
+    <section style={{ padding: '4rem 0 2rem 0', background: 'var(--bg-main)' }}>
       <div className="container">
         
         {/* Section Header */}

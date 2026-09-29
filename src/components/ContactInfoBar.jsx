@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Globe, Clock, ShieldCheck } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, Clock, ShieldCheck, Car } from 'lucide-react';
 import contactDoctorImg from '../assets/contact_doctor.jpg';
 import whatsappImg from '../assets/whatsapp.png';
 import { PDF_BOOKLET_DATA } from '../data/hospitalData';
@@ -15,7 +15,7 @@ export default function ContactInfoBar({ onOpenEmergency, onOpenAppointment }) {
       position: 'relative'
     }}>
       <div className="container">
-        
+
         {/* Top Callout Banner Box */}
         <div style={{
           background: 'var(--bg-main)',
@@ -54,7 +54,7 @@ export default function ContactInfoBar({ onOpenEmergency, onOpenAppointment }) {
           gap: '3.5rem',
           alignItems: 'center'
         }} className="get-in-touch-grid">
-          
+
           {/* Left Column: Direct Info */}
           <div>
             <h2 style={{
@@ -67,7 +67,7 @@ export default function ContactInfoBar({ onOpenEmergency, onOpenAppointment }) {
             }}>
               GET IN TOUCH
             </h2>
-            
+
             <div style={{
               width: '110px',
               height: '3px',
@@ -77,7 +77,7 @@ export default function ContactInfoBar({ onOpenEmergency, onOpenAppointment }) {
             }} />
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
-              
+
               {/* Phone No. */}
               <div>
                 <p style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
@@ -124,9 +124,9 @@ export default function ContactInfoBar({ onOpenEmergency, onOpenAppointment }) {
                 <p style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
                   Website
                 </p>
-                <a 
-                  href="http://www.jeevandaanhospital.com" 
-                  target="_blank" 
+                <a
+                  href="http://www.jeevandaanhospital.com"
+                  target="_blank"
                   rel="noreferrer"
                   style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.3rem)', fontWeight: 800, color: '#7a1a10', textDecoration: 'none', margin: 0 }}
                 >
@@ -139,8 +139,8 @@ export default function ContactInfoBar({ onOpenEmergency, onOpenAppointment }) {
                 <p style={{ fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '0.35rem' }}>
                   Email
                 </p>
-                <a 
-                  href="mailto:Jeevandanhospital508@gmail.com" 
+                <a
+                  href="mailto:Jeevandanhospital508@gmail.com"
                   style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.3rem)', fontWeight: 800, color: '#7a1a10', textDecoration: 'none', wordBreak: 'break-all', margin: 0 }}
                 >
                   Jeevandanhospital508@gmail.com
@@ -204,9 +204,9 @@ export default function ContactInfoBar({ onOpenEmergency, onOpenAppointment }) {
 
           {/* Right Column: Doctor Image */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <img 
-              src={contactDoctorImg} 
-              alt="Jeevandaan Hospital Doctor Helplines & Front Desk Support" 
+            <img
+              src={contactDoctorImg}
+              alt="Jeevandaan Hospital Doctor Helplines & Front Desk Support"
               style={{
                 width: '100%',
                 maxWidth: '440px',
@@ -301,7 +301,7 @@ export default function ContactInfoBar({ onOpenEmergency, onOpenAppointment }) {
             gridTemplateColumns: '340px 1fr',
             minHeight: '420px'
           }} className="map-embed-grid">
-            
+
             {/* Left Location Features */}
             <div style={{
               padding: '2rem',
@@ -357,9 +357,15 @@ export default function ContactInfoBar({ onOpenEmergency, onOpenAppointment }) {
                 padding: '1rem',
                 borderRadius: '12px'
               }}>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-main)', margin: 0, lineHeight: 1.4 }}>
-                  🚗 <strong>Free Patient Parking Available</strong>: Safe & spacious car/two-wheeler parking available inside the hospital premises.
-                </p>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-main)', margin: 0, lineHeight: 1.6 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontWeight: 700, marginBottom: '0.2rem' }}>
+                    <Car size={15} color="var(--accent)" style={{ flexShrink: 0 }} />
+                    <span>Free Patient Parking Available</span>
+                  </div>
+                  <p style={{ margin: 0, color: 'var(--text-muted)', paddingLeft: '1.4rem' }}>
+                    Safe & spacious car/two-wheeler parking available inside the hospital premises.
+                  </p>
+                </div>
               </div>
             </div>
 

@@ -19,7 +19,6 @@ import Career from './components/Career';
 import Departments from './components/Departments';
 import PatientFacilities from './components/PatientFacilities';
 import Gallery from './components/Gallery';
-import BlogUpdates from './components/BlogUpdates';
 import Footer from './components/Footer';
 
 import AppointmentModal from './components/AppointmentModal';
@@ -30,7 +29,7 @@ export default function App() {
   const [theme, setTheme] = useState('light');
   const [isAppointmentOpen, setIsAppointmentOpen] = useState(false);
   const [isEmergencyOpen, setIsEmergencyOpen] = useState(false);
-  
+
   const [selectedDoctorForModal, setSelectedDoctorForModal] = useState(null);
   const [selectedDepartment, setSelectedDepartment] = useState('');
 
@@ -57,46 +56,46 @@ export default function App() {
   const HomePage = () => (
     <>
       {/* Page 1: Hero Cover & Quick Specialist Search */}
-      <Hero 
+      <Hero
         onOpenAppointment={handleGeneralBooking}
         onOpenEmergency={() => setIsEmergencyOpen(true)}
         setSelectedDepartment={setSelectedDepartment}
       />
 
       {/* Page 4: MP Government Deemed Empanelled Hospital Highlight */}
-      <MpGovtEmpanelmentBanner 
+      <MpGovtEmpanelmentBanner
         onOpenEmergency={() => setIsEmergencyOpen(true)}
         onOpenAppointment={handleGeneralBooking}
       />
 
       {/* Page 2: About Us, Mission, Vision, Director Raja Choudhary Message & 7 Key Pillars */}
-      <AboutPdfSection 
+      <AboutPdfSection
         onOpenAppointment={handleGeneralBooking}
       />
 
       {/* Page 3: 16 Key Clinical Services & Specialities */}
-      <PdfServicesGrid 
+      <PdfServicesGrid
         onOpenAppointment={handleGeneralBooking}
         setSelectedDepartment={setSelectedDepartment}
       />
 
       {/* Page 3: Cashless Treatment, Ayushman Bharat PMJAY & Health Checkup Network */}
-      <CashlessPartnersSection 
+      <CashlessPartnersSection
         onOpenAppointment={handleGeneralBooking}
       />
 
       {/* World-Class Patient Facilities: Pharmacy, Modular OTs, Dialysis, Ambulance, Deluxe Wards, Canteen */}
-      <PatientFacilities 
+      <PatientFacilities
         onOpenAppointment={handleGeneralBooking}
         onOpenEmergency={() => setIsEmergencyOpen(true)}
       />
 
       {/* Live Hospital Operations & Specialist Directory */}
-      <DoctorDirectory 
+      {/* <DoctorDirectory 
         onSelectDoctor={handleOpenDoctorBooking}
         selectedDepartment={selectedDepartment}
         setSelectedDepartment={setSelectedDepartment}
-      />
+      /> */}
 
       {/* Real-time Bed Matrix & ICU Tracker */}
       <BedTracker onOpenEmergency={() => setIsEmergencyOpen(true)} />
@@ -111,7 +110,7 @@ export default function App() {
       <Testimonials />
 
       {/* Page 4: Contact, Helplines & Address Information */}
-      <ContactInfoBar 
+      <ContactInfoBar
         onOpenEmergency={() => setIsEmergencyOpen(true)}
         onOpenAppointment={handleGeneralBooking}
       />
@@ -121,22 +120,18 @@ export default function App() {
   // All Services Overview Page
   const ServicesPage = () => (
     <div style={{ paddingTop: '1.5rem' }}>
-      <Departments 
+      <Departments
         onOpenAppointment={handleGeneralBooking}
         setSelectedDepartment={setSelectedDepartment}
       />
-      <PatientFacilities 
+      <PatientFacilities
         onOpenAppointment={handleGeneralBooking}
         onOpenEmergency={() => setIsEmergencyOpen(true)}
       />
-      <CashlessPartnersSection 
+      <CashlessPartnersSection
         onOpenAppointment={handleGeneralBooking}
       />
-      <DoctorDirectory 
-        onSelectDoctor={handleOpenDoctorBooking}
-        selectedDepartment={selectedDepartment}
-        setSelectedDepartment={setSelectedDepartment}
-      />
+
       <BedTracker onOpenEmergency={() => setIsEmergencyOpen(true)} />
       <HealthPackages onOpenAppointment={handleGeneralBooking} />
       <PatientPortal onOpenAppointment={handleGeneralBooking} />
@@ -149,7 +144,7 @@ export default function App() {
       <ScrollToTop />
 
       {/* Navigation Header */}
-      <Navbar 
+      <Navbar
         onOpenAppointment={handleGeneralBooking}
         onOpenEmergency={() => setIsEmergencyOpen(true)}
         theme={theme}
@@ -167,96 +162,85 @@ export default function App() {
 
           {/* Services Routes */}
           <Route path="/services" element={<ServicesPage />} />
-          <Route 
-            path="/departments" 
+          <Route
+            path="/departments"
             element={
               <div style={{ paddingTop: '1.5rem' }}>
-                <Departments 
+                <Departments
                   onOpenAppointment={handleGeneralBooking}
                   setSelectedDepartment={setSelectedDepartment}
                 />
               </div>
-            } 
+            }
           />
-          <Route 
-            path="/facilities" 
+          <Route
+            path="/facilities"
             element={
               <div style={{ paddingTop: '1.5rem' }}>
-                <PatientFacilities 
+                <PatientFacilities
                   onOpenAppointment={handleGeneralBooking}
                   onOpenEmergency={() => setIsEmergencyOpen(true)}
                 />
               </div>
-            } 
+            }
           />
-          <Route 
-            path="/patient-facilities" 
+          <Route
+            path="/patient-facilities"
             element={
               <div style={{ paddingTop: '1.5rem' }}>
-                <PatientFacilities 
+                <PatientFacilities
                   onOpenAppointment={handleGeneralBooking}
                   onOpenEmergency={() => setIsEmergencyOpen(true)}
                 />
               </div>
-            } 
+            }
           />
-          <Route 
-            path="/doctors" 
+          <Route
+            path="/doctors"
             element={
               <div style={{ paddingTop: '1.5rem' }}>
-                <DoctorDirectory 
+                <DoctorDirectory
                   onSelectDoctor={handleOpenDoctorBooking}
                   selectedDepartment={selectedDepartment}
                   setSelectedDepartment={setSelectedDepartment}
                 />
               </div>
-            } 
+            }
           />
-          <Route 
-            path="/beds" 
+          <Route
+            path="/beds"
             element={
               <div style={{ paddingTop: '1.5rem' }}>
                 <BedTracker onOpenEmergency={() => setIsEmergencyOpen(true)} />
               </div>
-            } 
+            }
           />
-          <Route 
-            path="/packages" 
+          <Route
+            path="/packages"
             element={
               <div style={{ paddingTop: '1.5rem' }}>
                 <HealthPackages onOpenAppointment={handleGeneralBooking} />
               </div>
-            } 
+            }
           />
-          <Route 
-            path="/portal" 
+          <Route
+            path="/portal"
             element={
               <div style={{ paddingTop: '1.5rem' }}>
                 <PatientPortal onOpenAppointment={handleGeneralBooking} />
               </div>
-            } 
+            }
           />
 
           {/* Gallery Route */}
-          <Route 
-            path="/gallery" 
+          <Route
+            path="/gallery"
             element={
-              <Gallery 
+              <Gallery
                 onOpenAppointment={handleGeneralBooking}
                 onOpenEmergency={() => setIsEmergencyOpen(true)}
               />
-            } 
-          />
-
-          {/* Blog & Health Updates Route */}
-          <Route 
-            path="/blog" 
-            element={
-              <BlogUpdates 
-                onOpenAppointment={handleOpenDoctorBooking}
-                onOpenEmergency={() => setIsEmergencyOpen(true)}
-              />
-            } 
+            }
           />
 
           {/* Contact Us Route */}
@@ -271,27 +255,27 @@ export default function App() {
       </main>
 
       {/* Global Footer */}
-      <Footer 
+      <Footer
         onOpenAppointment={handleGeneralBooking}
         onOpenEmergency={() => setIsEmergencyOpen(true)}
       />
 
       {/* Modals */}
-      <AppointmentModal 
+      <AppointmentModal
         isOpen={isAppointmentOpen}
         onClose={() => setIsAppointmentOpen(false)}
         initialDoctor={selectedDoctorForModal}
       />
 
       {/* Emergency SOS Modal */}
-      <EmergencyModal 
+      <EmergencyModal
         isOpen={isEmergencyOpen}
         onClose={() => setIsEmergencyOpen(false)}
       />
 
       {/* Floating 24/7 WhatsApp & Quick Call Action Buttons */}
-      <FloatingActions 
-        onOpenEmergency={() => setIsEmergencyOpen(true)} 
+      <FloatingActions
+        onOpenEmergency={() => setIsEmergencyOpen(true)}
       />
     </div>
   );
